@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo em Palavras</title>
+    <style>
+        body{
+            padding: 0px 100px;
+            font-family: sans-serif;
+        }
+        .container{
+            margin-top: 50px;
+        }
+        .upper div{
+            display: inline;
+            margin-left: 100px;
+            white-space: pre;
+        }
+        .bottom{
+            margin-top: 30px;
+            display: flex;
+        }
+        .bottom div{
+            flex: 1;
+            border: 1px solid rgb(118, 118, 118);
+            height: 400px;
+            margin: 10px;
+        }
+        .bottom div textarea{
+            resize: none;
+            width: 480%;
+            height: 95%;
+            padding: 10px;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            background-color: white;
+        }
+        .bottom div:first-child{
+            margin-left: 0px;
+            -webkit-box-align: left;
+            -webkit-box-pack: left;
+            display: -webkit-box;
+        }
+        .bottom div:last-child{
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="upper">
+            <img src="Screenshot 2023-11-09 13.20.41.png">
+            <input type="file">
+            <button disabled>Reconhecer Imagem</button>
+            <button onclick="pausecontinue()" id="pausar" disabled>Pausar/Continuar</button>
+            <button onclick="stop()" id="parar" disabled>Parar</button>
+            <button onclick="falar()" id="falar" disabled>Falar</button>
+            <div class="progress"></div>
+        </div>
+        <div class="bottom">
+            <div>
+                <textarea disabled placeholder="Seu texto ficará aqui"></textarea>
+            </div>
+        </div>
+    </div>
+<script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+<script src="script.js"></script>
+</body>
+</html>
