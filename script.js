@@ -44,6 +44,8 @@ function falar()
     ut = new SpeechSynthesisUtterance(textofinal)
     console.log(textofinal)
     window.speechSynthesis.speak(ut)
+    const worked = speechSynthesis.speaking || speechSynthesis.pending;
+    console.log(worked);
     document.getElementById("falar").disabled = true
     document.getElementById("pausar").disabled = false
     document.getElementById("parar").disabled = false
