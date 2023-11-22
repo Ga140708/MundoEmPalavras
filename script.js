@@ -1,10 +1,8 @@
 const fileSelector = document.querySelector('input')
 const start = document.querySelector('button')
-//const img = document.querySelector('img')
 const progress = document.querySelector('.progress') 
 const textarea = document.querySelector('textarea')
 
-// first show image on upload
 fileSelector.onchange = () => {
     if (fileSelector.files[0] == null)
     {
@@ -14,9 +12,6 @@ fileSelector.onchange = () => {
     {
         start.disabled = false
     }
-    //var file = fileSelector.files[0]
-    //var imgUrl = window.URL.createObjectURL(new Blob([file], { type: 'image/jpg' }))
-    //img.src = imgUrl // mudando o src da imagem no html
 }
 
 
