@@ -14,7 +14,7 @@
             margin-top: 50px;
         }
         .upper div{
-            display: inline;
+            display: flex;
             margin-left: 100px;
             white-space: pre;
         }
@@ -47,13 +47,27 @@
         .bottom div:last-child{
             margin-right: 0px;
         }
+        .middle
+        {
+            margin-left: 25%;
+        }
+        .uppercomimagem
+        {
+            display: flex;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="uppercomimagem">
         <div class="upper">
-            <img src="Screenshot 2023-11-09 13.20.41.png">
-            <input type="file">
+            <h1>Mundo Em Palavras</h1>
+            <h5>Não estamos apenas lendo textos, estamos mudando vidas!</h5>
+        </div>
+        <img src="Screenshot 2023-11-09 13.20.41 (1).png">
+        </div>
+        <div class="middle">
+            <input type="file"/>
             <button disabled>Reconhecer Imagem</button>
             <button onclick="pausecontinue()" id="pausar" disabled>Pausar/Continuar</button>
             <button onclick="stop()" id="parar" disabled>Parar</button>
